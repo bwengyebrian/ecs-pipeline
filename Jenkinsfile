@@ -5,7 +5,7 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'label-of-my-preconfigured-template'
+                inheritFrom 'esc-test'
                 cpu 2048
                 memory 4096
                 image 'shatsibed/test:27'
