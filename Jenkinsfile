@@ -1,22 +1,3 @@
-
-pipeline {
-  agent none
-
-  stages {
-       stage('PublishAndTests') {
-          environment {
-              STAGE='prod'
-          }
-          agent {
-            label 'build-python36'
-          }
-      }
-      steps {
-        sh 'java -version'
-      }
-    }
-  }
-
 pipeline {
   agent none
 
