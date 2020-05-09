@@ -6,8 +6,8 @@ pipeline {
         agent {
             ecs {
                 inheritFrom 'esc-test'
-                cpu 2048
-                memory 4096
+                cpu 1024
+                memory 512
                 image 'shatsibed/test:27'
                 logDriver 'fluentd'
                 logDriverOptions([[name: 'foo', value:'bar'], [name: 'bar', value: 'foo']])
