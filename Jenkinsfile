@@ -9,8 +9,6 @@ pipeline {
                 cpu 1024
                 memory 512
                 image 'shatsibed/test:27'
-                logDriver 'fluentd'
-                logDriverOptions([[name: 'foo', value:'bar'], [name: 'bar', value: 'foo']])
                 portMappings([[containerPort: 22, hostPort: 22, protocol: 'tcp'], [containerPort: 443, hostPort: 443, protocol: 'tcp']])
             }
         }
