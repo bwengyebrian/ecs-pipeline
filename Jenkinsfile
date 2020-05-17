@@ -5,7 +5,7 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'esc-test'
+                inheritFrom 'ecs-test'
                 cpu 512
                 memory 1024
             }
