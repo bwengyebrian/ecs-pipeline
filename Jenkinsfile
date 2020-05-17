@@ -6,6 +6,8 @@ pipeline {
         agent {
             ecs {
                 inheritFrom 'esc-test'
+                cpu 512
+                memory 1024
             }
         }
         steps {
